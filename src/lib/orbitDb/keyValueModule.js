@@ -1,26 +1,13 @@
-import IPFS from 'ipfs';
 import OrbitDB from 'orbit-db';
+import IpfsApi from 'ipfs-api';
 
-const ipfsOptions = {
-  EXPERIMENTAL: {
-    pubsub: true
-  },
-};
-
-// Create IPFS instance
-const ipfs = new IPFS(ipfsOptions);
+const ipfs = IpfsApi(process.env.IPFS_DAEMON_API_SERVER, process.env.IPFS_CONNECTION_PORT);
 let db;
 
 module.exports.connect = async () => {
 	if(!db){
-		return new Promise((resolve, reject) => {
-			ipfs.on('ready', async () => {
-				// Create OrbitDB instance
-				const orbitdb = new OrbitDB(ipfs);
-				db = await orbitdb.keyvalue('keyValSample')
-				resolve(db);
-			});
-		})
+		const orbitdb = new OrbitDB(ipfs);
+		db = await orbitdb.keyvalue('keyValSample');
 	}else{
 		return db;
 	}

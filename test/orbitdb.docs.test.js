@@ -10,13 +10,14 @@ describe('orbitDb document based DB module test', () => {
 		let val = await docDb.read('QmAwesomeIpfsHash');
 		const all = await docDb.query((doc) => doc._id === 'QmAwesomeIpfsHash');
 		console.log('all:', all);
-		await docDb.diconnect();
+		
 
 		expect(val).toEqual(insertDoc);
 		expect(all[0]).toEqual(insertDoc);
 
 		await docDb.delete('QmAwesomeIpfsHash');
 		val = await docDb.read('QmAwesomeIpfsHash');
+
 		expect(val).toEqual(undefined);
 	});
 	
