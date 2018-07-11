@@ -17,7 +17,10 @@ This project is design to connect to Ethereum blockchain and interact with MetaM
 - Material-UI
 
 #### Smart contract/Solidity
-- Truffle
+- [Truffle](./TRUFFLE.md)
+
+#### Database
+- [Bluzelle](./BLUZELLE.md)
 
 ### Install flow
 
@@ -60,5 +63,6 @@ yarn start
 ```
 
 ## Reference
-ganache-cli: https://github.com/trufflesuite/ganache-cli
-truffle: https://github.com/trufflesuite/truffle
+
+- ganache-cli: https://github.com/trufflesuite/ganache-cli
+- truffle: https://github.com/trufflesuite/truffle

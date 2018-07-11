@@ -15,5 +15,11 @@ export default {
   metaMask: {
     account: null,
     network: null
+  },
+  bluzelle: {
+    keys: [],
+    key: '',
+    value: '',
+    has: false
   }
 }; 

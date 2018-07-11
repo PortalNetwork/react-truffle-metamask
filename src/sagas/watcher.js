@@ -6,6 +6,14 @@ import {
   getSimpleTokenSymbolResultSaga,
   getSimpleTokenDecimalsResultSaga,
 } from './simpleTokenSaga';
+import { 
+  bluzelleCreateSaga, 
+  bluzelleUpdateSaga, 
+  bluzelleRemoveSaga, 
+  bluzelleReadSaga, 
+  bluzelleKeysSaga, 
+  bluzelleHasSaga
+} from './bluzelleSaga';
 
 export function* watchHealth() {
   yield takeLatest(types.HEALTH, getHealthResultSaga);
@@ -21,4 +29,28 @@ export function* watchSimpleTokenSymbol() {
 
 export function* watchSimpleTokenDecimals() {
   yield takeLatest(types.SIMPLE_TOKEN_DECIMALS, getSimpleTokenDecimalsResultSaga);
+}
+
+export function* watchBluzelleCreate() {
+  yield takeLatest(types.BLUZELLE_CREATE, bluzelleCreateSaga);
+}
+
+export function* watchBluzelleUpdate() {
+  yield takeLatest(types.BLUZELLE_UPDATE, bluzelleUpdateSaga);
+}
+
+export function* watchBluzelleRemove() {
+  yield takeLatest(types.BLUZELLE_REMOVE, bluzelleRemoveSaga);
+}
+
+export function* watchBluzelleRead() {
+  yield takeLatest(types.BLUZELLE_READ, bluzelleReadSaga);
+}
+
+export function* watchBluzelleKeys() {
+  yield takeLatest(types.BLUZELLE_KEYS, bluzelleKeysSaga);
+}
+
+export function* watchBluzelleHas() {
+  yield takeLatest(types.BLUZELLE_HAS, bluzelleHasSaga);
 }
