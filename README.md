@@ -43,7 +43,7 @@ npm install -g truffle
 #### Build repo
 
 ```
-yarn install
+npm install
 truffle compile
 ```
 
@@ -56,7 +56,13 @@ ganache-cli
 
 ```
 truffle migrate
-yarn start
+npm start
+```
+
+#### Build repo
+
+```
+npm run build
 ```
 
 ## Reference
