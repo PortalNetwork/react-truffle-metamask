@@ -4,12 +4,6 @@ import {
   watchSimpleTokenName,
   watchSimpleTokenSymbol,
   watchSimpleTokenDecimals,
-  watchBluzelleCreate,
-  watchBluzelleUpdate,
-  watchBluzelleRemove,
-  watchBluzelleRead,
-  watchBluzelleKeys,
-  watchBluzelleHas,
 } from './watcher';
 
 export default function* startForman() {
@@ -18,11 +12,5 @@ export default function* startForman() {
     fork(watchSimpleTokenName),
     fork(watchSimpleTokenSymbol),
     fork(watchSimpleTokenDecimals),
-    fork(watchBluzelleCreate),
-    fork(watchBluzelleUpdate),
-    fork(watchBluzelleRemove),
-    fork(watchBluzelleRead),
-    fork(watchBluzelleKeys),
-    fork(watchBluzelleHas)
   ]);
 };

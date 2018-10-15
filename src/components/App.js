@@ -6,7 +6,6 @@ import SendTransactoin from './SendTransaction';
 import {Warning} from './Warning/Warning';
 import {Top} from './Top/Top';
 import './App.css';
-import { Bluzelle } from './Bluzelle';
 
 class App extends Component {
   constructor(props) {
@@ -30,7 +29,6 @@ class App extends Component {
         <Health {...this.props} />
         <Contract {...this.props} {...this.state} />
         <SendTransactoin {...this.props} {...this.state}/>
-        <Bluzelle {...this.props} {...this.state} />
       </div>
     );
   }
