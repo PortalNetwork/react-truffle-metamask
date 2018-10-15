@@ -16,10 +16,4 @@ export default {
     account: null,
     network: null
   },
-  bluzelle: {
-    keys: [],
-    key: '',
-    value: '',
-    has: false
-  }
 }; 

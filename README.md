@@ -19,9 +19,6 @@ This project is design to connect to Ethereum blockchain and interact with MetaM
 #### Smart contract/Solidity
 - [Truffle](./TRUFFLE.md)
 
-#### Database
-- [Bluzelle](./BLUZELLE.md)
-
 ### Install flow
 
 #### Clone repo
@@ -46,7 +43,7 @@ npm install -g truffle
 #### Build repo
 
 ```
-yarn install
+npm install
 truffle compile
 ```
 
@@ -59,7 +56,13 @@ ganache-cli
 
 ```
 truffle migrate
-yarn start
+npm start
+```
+
+#### Build repo
+
+```
+npm run build
 ```
 
 ## Reference

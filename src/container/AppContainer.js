@@ -18,14 +18,6 @@ import {
   metaMaskAccountAction,
   metaMaskNetworkAction
 } from '../actions/metaMaskActions';
-import { 
-  bluzelleCreateAction, 
-  bluzelleUpdateAction, 
-  bluzelleRemoveAction, 
-  bluzelleReadAction, 
-  bluzelleKeysAction, 
-  bluzelleHasActions
-} from '../actions/bluzelleActions';
 
 const  mapStateToProps = (state) => ({
   isFetching: state.isFetching,
@@ -69,24 +61,6 @@ const mapDispatchToProps = (dispatch) => {
     handleMetaMaskNetwork: (network) => {
       dispatch(metaMaskNetworkAction(network));
     },
-    handleBluzelleCreate: (key, value) => {
-      dispatch(bluzelleCreateAction(key, value));
-    },
-    handleBluzelleUpdate: (key, value) => {
-      dispatch(bluzelleUpdateAction(key, value));
-    },
-    handleBluzelleRemove: (key) => {
-      dispatch(bluzelleRemoveAction(key));
-    },
-    handleBluzelleRead: (key) => {
-      dispatch(bluzelleReadAction(key));
-    },
-    handleBluzelleKeys: () => {
-      dispatch(bluzelleKeysAction());
-    },
-    handleBluzelleHas: (key) => {
-      dispatch(bluzelleHasActions(key));
-    }
   }
 };
 
